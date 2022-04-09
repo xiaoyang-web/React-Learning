@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './01_base/01-class 组件';
+import App from './01_base/06-事件绑定(2)';
 
 const root: HTMLElement = document.getElementById('app')!;
 
