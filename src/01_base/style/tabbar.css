@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+ul.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: #fbfbfb;
+  list-style-type: none;
+  box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.05);
+}
+
+li.tabbar-item {
+  flex: 1;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+li.tabbar-item:not(:last-child) {
+  border-right: 1px solid #e2e2e2;
+}
+
+li.tabbar-item.active {
+  background-color: #98b2ff;
+  color: #fff;
+}

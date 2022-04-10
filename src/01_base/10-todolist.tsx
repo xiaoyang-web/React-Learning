@@ -48,7 +48,7 @@ class App extends Component {
           ref={this.inputRef}
           onKeyPress={(e) => {
             if (e.nativeEvent.key === 'Enter') {
-              this.addTodo()
+              this.addTodo();
             }
           }}
         />
