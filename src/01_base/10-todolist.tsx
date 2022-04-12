@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-type StateType = {
+interface StateType  {
   list: { id: string, content: string }[]
 }
 
@@ -19,7 +19,7 @@ class App extends Component {
     }
 
     const todo = {
-      id: String(+new Date()),
+      id: String(Date.now()),
       content: inputElement.value
     };
     const newList = [...this.state.list];

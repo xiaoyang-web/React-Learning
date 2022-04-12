@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-/*class Test {
+/* class Test {
   name: string;
 
   constructor() {
@@ -23,7 +23,7 @@ obj.say();
 
 const obj1 = new ChildTest();
 obj1.say();
-obj1.eat();*/
+obj1.eat(); */
 
 class App extends Component {
   render() {

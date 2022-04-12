@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-type StateType = {
+interface StateType {
   name: string,
   age: number
 }

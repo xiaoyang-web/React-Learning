@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style/tabbar.css';
 
-type PropsType = {
+interface PropsType {
   onChange: (index: number) => void;
 }
 

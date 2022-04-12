@@ -1,2 +1,2 @@
 # React-Learning
-some simple learning casess
+some simple learning cases
