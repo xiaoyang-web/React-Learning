@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
   state = {
@@ -8,12 +8,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div dangerouslySetInnerHTML={{
-          __html: this.state.htmlTemplate
-        }} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: this.state.htmlTemplate
+          }}
+        />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

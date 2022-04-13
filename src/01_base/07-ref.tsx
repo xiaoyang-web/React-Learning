@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
-  inputRef = React.createRef<HTMLInputElement>();
-
+  inputRef = React.createRef<HTMLInputElement>()
 
   render() {
     return (
@@ -11,14 +10,14 @@ class App extends Component {
 
         <button
           onClick={() => {
-            console.log(this.inputRef.current?.value);
+            console.log(this.inputRef.current?.value)
           }}
         >
           获取输入值
         </button>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

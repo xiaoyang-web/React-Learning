@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
-  name = 'alva-yky';
+  name = 'alva-yky'
 
   handleClick1() {
-    console.log(`我的名字叫：${this.name}`);
+    console.log(`我的名字叫：${this.name}`)
   }
 
   handleClick2 = (e: React.MouseEvent) => {
-    console.log(`我的名字叫：${this.name}`, e);
+    console.log(`我的名字叫：${this.name}`, e)
   }
 
   handleClick3 = (e: React.MouseEvent, age: string) => {
-    console.log(`我的名字叫：${this.name}, 今年${age}岁`, e);
+    console.log(`我的名字叫：${this.name}, 今年${age}岁`, e)
   }
 
   render() {
@@ -25,34 +25,34 @@ class App extends Component {
         {/* 最为推荐的写法，即可以避免this指向问题，还可以传递自定义参数 */}
         <button onClick={(e) => this.handleClick3(e, '22')}>按钮3</button>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 
 /*
-* React并不会真正的绑定事件在每一个具体的元素身上，而是采用事件代理的方式
-* */
+ * React并不会真正的绑定事件在每一个具体的元素身上，而是采用事件代理的方式
+ * */
 
 /*
-* 改变this指向的三种方式：
-* （1）call，改变this，自动执行函数
-* （2）apply，改变this，自动执行函数
-* （3）bind，改变this，不会自动执行函数，而是返回改变this指向的函数
-* */
+ * 改变this指向的三种方式：
+ * （1）call，改变this，自动执行函数
+ * （2）apply，改变this，自动执行函数
+ * （3）bind，改变this，不会自动执行函数，而是返回改变this指向的函数
+ * */
 
 const obj1 = {
   name: 'alva-yky',
   sayName() {
-    console.log(this.name);
+    console.log(this.name)
   }
 }
 
 const obj2 = {
   name: 'xiaoming',
   sayName() {
-    console.log(this.name);
+    console.log(this.name)
   }
 }
 

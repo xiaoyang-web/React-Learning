@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 /* class Test {
   name: string;
@@ -27,12 +27,8 @@ obj1.eat(); */
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        hello world
-      </div>
-    );
+    return <div>hello world</div>
   }
 }
 
-export default App;
+export default App

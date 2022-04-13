@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
-
   state = {
     list: [
       {
@@ -23,15 +22,15 @@ class App extends Component {
     return (
       <div>
         <ul>
-          {
-            this.state.list.map((item, index) => (
-              <li key={item.id}>{item.name}--{index}</li>
-            ))
-          }
+          {this.state.list.map((item, index) => (
+            <li key={item.id}>
+              {item.name}--{index}
+            </li>
+          ))}
         </ul>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

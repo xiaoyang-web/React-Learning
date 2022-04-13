@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './style/tabbar.css';
+import React, { Component } from 'react'
+import './style/tabbar.css'
 
 interface PropsType {
-  onChange: (index: number) => void;
+  onChange: (index: number) => void
 }
 
 // 底部导航
@@ -23,56 +23,48 @@ class Tabbar extends Component<PropsType, any> {
         title: '我的'
       }
     ]
-  };
+  }
 
   render() {
-    const {
-      onChange
-    } = this.props;
+    const { onChange } = this.props
 
     return (
       <ul className="tabbar">
-        {
-          this.state.list.map((item, index) => (
-            <li
-              key={item.id}
-              className={`tabbar-item ${this.state.current === index ? 'active' : ''}`}
-              onClick={() => {
-                this.setState({
-                  current: index
-                })
-                onChange(index);
-              }}
-            >
-              {item.title}
-            </li>
-          ))
-        }
+        {this.state.list.map((item, index) => (
+          <li
+            key={item.id}
+            className={`tabbar-item ${
+              this.state.current === index ? 'active' : ''
+            }`}
+            onClick={() => {
+              this.setState({
+                current: index
+              })
+              onChange(index)
+            }}
+          >
+            {item.title}
+          </li>
+        ))}
       </ul>
-    );
+    )
   }
 }
 
 // 电影组件
 const Film = () => {
-  return (
-    <div>电影页面</div>
-  );
-};
+  return <div>电影页面</div>
+}
 
 // 影院组件
 const Cinema = () => {
-  return (
-    <div>影院页面</div>
-  );
-};
+  return <div>影院页面</div>
+}
 
 // 我的组件
 const Profile = () => {
-  return (
-    <div>我的页面</div>
-  );
-};
+  return <div>我的页面</div>
+}
 
 class App extends Component {
   state = {
@@ -95,21 +87,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        {
-          this.state.currentComponent
-        }
+        {this.state.currentComponent}
         <Tabbar
-          onChange={
-            (index) => {
-              this.setState({
-                currentComponent: this.showTabPage(index)
-              })
-            }
-          }
+          onChange={(index) => {
+            this.setState({
+              currentComponent: this.showTabPage(index)
+            })
+          }}
         />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
