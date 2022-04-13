@@ -2,26 +2,19 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: [
-    'alloy',
-    'alloy/react',
-    'alloy/typescript',
-  ],
+  extends: ['alloy', 'alloy/react', 'alloy/typescript'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    "@typescript-eslint/explicit-member-accessibility": "off"
-  },
-};
+    '@typescript-eslint/explicit-member-accessibility': 'off'
+  }
+}
